@@ -1,18 +1,10 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import Header from "../components/Header";
 
 const Layout = () => {
   return (
     <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/forecast">Forecast</Link>
-          </li>
-          <li>
-            <Link to="/forecast/1">Day View</Link>
-          </li>
-        </ul>
-      </nav>
+      <Header />
       <Outlet />
     </>
   );
