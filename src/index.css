@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-textPrimary: #1f2937;
+  --color-textSecondary: #6b7280;
+  --color-border: #e5e7eb;
+  --color-accent: #3b82f6;
+  --color-moodEnergetic: #facc15;
+  --color-moodCozy: #c87100;
+  --color-moodSleepy: #c4b5fd;
+  --color-moodChill: #e0f2fe;
+  --color-moodProductive: #a7f3d0;
+  --color-moodAdventurous: #00ba70;
+
+  --font-family-heading: "Inter", sans-serif;
+  --font-family-body: "Roboto", sans-serif;
+
+  --font-size-heading: 2rem;
+  --font-size-subheading: 1.5rem;
+  --font-size-body: 1rem;
+  --font-size-caption: 0.875rem;
+
+  --font-weight-heading: 700;
+  --font-weight-subheading: 600;
+  --font-weight-body: 400;
+  --font-weight-caption: 400;
+}
+
+.heading {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-heading);
+  color: var(--color-textPrimary);
+}
+
+.subheading {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-subheading);
+  font-weight: var(--font-weight-subheading);
+  color: var(--color-textPrimary);
+}
+
+.body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  color: var(--color-textPrimary);
+}
+
+.caption {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-caption);
+  color: var(--color-textSecondary);
+}
