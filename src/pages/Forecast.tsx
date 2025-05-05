@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { ForecastDay } from "../types/data";
-import { Link } from "react-router-dom";
 import ForecastCard from "../components/ForecastCard";
 
 interface ForecastPageProps {
