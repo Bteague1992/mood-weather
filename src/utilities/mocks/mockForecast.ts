@@ -4,7 +4,7 @@ import { getMood } from "../getMood";
 export const mockForecast: ForecastDay[] = [
   // Energetic
   {
-    day: "Mon",
+    day: "Monday",
     date: "2023-10-02",
     tempHigh: 85,
     tempLow: 65,
@@ -17,7 +17,7 @@ export const mockForecast: ForecastDay[] = [
   },
   // Cozy
   {
-    day: "Tue",
+    day: "Tuesday",
     date: "2023-10-03",
     tempHigh: 60,
     tempLow: 50,
@@ -30,7 +30,7 @@ export const mockForecast: ForecastDay[] = [
   },
   // Sleepy
   {
-    day: "Wed",
+    day: "Wednesday",
     date: "2023-10-04",
     tempHigh: 62,
     tempLow: 50,
@@ -43,7 +43,7 @@ export const mockForecast: ForecastDay[] = [
   },
   // Chill
   {
-    day: "Thu",
+    day: "Thursday",
     date: "2023-10-05",
     tempHigh: 72,
     tempLow: 58,
@@ -56,7 +56,7 @@ export const mockForecast: ForecastDay[] = [
   },
   // Adventurous
   {
-    day: "Fri",
+    day: "Friday",
     date: "2023-10-06",
     tempHigh: 95,
     tempLow: 60,
@@ -69,7 +69,7 @@ export const mockForecast: ForecastDay[] = [
   },
   // Productive
   {
-    day: "Sat",
+    day: "Saturday",
     date: "2023-10-07",
     tempHigh: 76,
     tempLow: 60,
@@ -81,7 +81,7 @@ export const mockForecast: ForecastDay[] = [
     ...getMood(76, 60, 5, 10, 40, 12),
   },
   {
-    day: "Sun",
+    day: "Sunday",
     date: "2023-10-08",
     tempHigh: 70,
     tempLow: 55,

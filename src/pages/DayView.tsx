@@ -12,57 +12,78 @@ const DayViewPage: FC<DayViewPageProps> = ({ forecast }) => {
 
   if (!day) {
     return (
-      <section>
-        <h2 className="text-xl font-semibold mb-4">Forecast Detail</h2>
+      <section data-testid="no-data">
         <p>No forecast available for this date.</p>
       </section>
     );
   }
 
   return (
-    <section className="p-4">
-      <Link to="/">&larr; Back</Link>
-      <h2 className="text-2xl font-bold mb-4">
-        {day.day} – {day.mood} {day.emoji}
-      </h2>
-      <dl className="space-y-2">
-        <div>
-          <dt className="font-semibold">High Temp:</dt>
-          <dd>{day.tempHigh}°F</dd>
+    <section className="p-4" role="main">
+      <Link
+        to="/"
+        className="subheading"
+        aria-label="Back to forecast overview"
+      >
+        &larr; Back
+      </Link>
+      <article
+        data-testid={`day-view-${day.date}`}
+        className={
+          "w-full max-w-[1200px] border border-solid border-gray-200 my-2 overflow-hidden rounded-md shadow-[-4px_4px_6px_var(--color-accent)]"
+        }
+      >
+        <header
+          className={`${day.mood.toLowerCase()} w-full heading text-center border-b border-solid border-black-200 p-2`}
+        >
+          <h2>{day.day}</h2>
+        </header>
+        <div className="w-full flex flex-col items-center mt-4 md:flex-row md:justify-center">
+          <span className="text-5xl md:mr-[100px]" aria-hidden="true">
+            {day.emoji}
+          </span>
+          <span className="flex items-center">
+            <h3 className="subheading mr-3">Mood:</h3>
+            <p>{day.mood}</p>
+          </span>
         </div>
-        <div>
-          <dt className="font-semibold">Low Temp:</dt>
-          <dd>{day.tempLow}°F</dd>
-        </div>
-        <div>
-          <dt className="font-semibold">Feels Like:</dt>
-          <dd>{day.feelsLike}°F</dd>
-        </div>
-        <div>
-          <dt className="font-semibold">Wind Speed:</dt>
-          <dd>{day.windSpeed} mph</dd>
-        </div>
-        <div>
-          <dt className="font-semibold">UV Index:</dt>
-          <dd>{day.uvIndex}</dd>
-        </div>
-        <div>
-          <dt className="font-semibold">Rain Chance:</dt>
-          <dd>{day.rainChance}%</dd>
-        </div>
-        <div>
-          <dt className="font-semibold">Cloud Cover:</dt>
-          <dd>{day.cloudCover}%</dd>
-        </div>
-        <div>
-          <dt className="font-semibold">Suggested Outfit:</dt>
-          <dd>{day.outfit}</dd>
-        </div>
-        <div>
-          <dt className="font-semibold">Suggested Activity:</dt>
-          <dd>{day.activity}</dd>
-        </div>
-      </dl>
+        <dl className="grid grid-cols-2 sm:grid-cols-3 gap-4 p-3 sm:p-5">
+          <div className="sm:text-start">
+            <dt className="bodybody">High/Low:</dt>
+            <dd className="caption">
+              {day.tempHigh}°F/{day.tempLow}°F
+            </dd>
+          </div>
+          <div className="text-end sm:text-center">
+            <dt className="body">Feels Like:</dt>
+            <dd className="caption">{day.feelsLike}°F</dd>
+          </div>
+          <div className="sm:text-end">
+            <dt className="body">Wind Speed:</dt>
+            <dd className="caption">{day.windSpeed} mph</dd>
+          </div>
+          <div className="text-end sm:text-start">
+            <dt className="body">UV Index:</dt>
+            <dd className="caption">{day.uvIndex}</dd>
+          </div>
+          <div className="sm:text-center">
+            <dt className="body">Rain Chance:</dt>
+            <dd className="caption">{day.rainChance}%</dd>
+          </div>
+          <div className="text-end">
+            <dt className="body">Cloud Cover:</dt>
+            <dd className="caption">{day.cloudCover}%</dd>
+          </div>
+          <div>
+            <dt className="body">Suggested Outfit:</dt>
+            <dd className="caption">{day.outfit}</dd>
+          </div>
+          <div className="text-end sm:text-center">
+            <dt className="body">Suggested Activity:</dt>
+            <dd className="caption">{day.activity}</dd>
+          </div>
+        </dl>
+      </article>
     </section>
   );
 };

@@ -14,9 +14,11 @@ const ForecastCard: FC<ForecastCardProps> = ({ day }) => {
         className={`w-full body border border-solid border-gray-200 my-2 p-4 rounded-md shadow-[-4px_4px_6px_var(--color-accent)] ${day.mood.toLowerCase()} flex justify-between items-center`}
         aria-label={`View detailed forecast for ${day.day}`}
       >
-        <h2 className="subheading w-1/3 sm:w-1/4">{day.day}</h2>
+        <h2 className="subheading w-1/3 sm:w-1/4">{day.day.slice(0, 3)}</h2>
         <span className="hidden sm:flex w-1/4 items-center">
-          <p className="text-[white] bg-[black] rounded-2xl px-2">{day.mood}</p>
+          <p className="text-[white] bg-[var(--color-accent)] rounded-2xl px-2">
+            {day.mood}
+          </p>
         </span>
         <h3 className="subheading mr-3 w-1/3 sm:w-1/4 text-center">
           {day.tempHigh}°/{day.tempLow}°

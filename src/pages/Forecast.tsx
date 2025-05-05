@@ -19,7 +19,7 @@ const ForecastPage: FC<ForecastPageProps> = ({ forecast }) => {
       <h1 className="subheading mb-4">7 Day Forecast</h1>
       <ul className="w-full">
         {forecast.map((day) => (
-          <ForecastCard day={day} />
+          <ForecastCard key={day.date} day={day} />
         ))}
       </ul>
     </section>
