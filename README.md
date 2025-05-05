@@ -14,6 +14,8 @@ https://open-meteo.com/en/docs
 ##Description:
 7-day weather forecast with dynamically assigned mood, colors, outfit suggestions, and activity suggestions depending on the days weather
 
+###Note: must give location permission to get accurate weather data. If not, it will use default coords to fetch data
+
 ##Startup instructions:
 
 - clone repo:
