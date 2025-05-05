@@ -24,5 +24,8 @@ https://open-meteo.com/en/docs
 
 - run 'npm run test'
 
+##Deployed Link
+https://mood-weather-7moy.vercel.app/
+
 ##Figma Design
 https://www.figma.com/design/KllmKeBxOVXiDouobQirJT/MoodWeather?node-id=0-1&p=f&t=DdEQJuHZTeqY4g2z-0
