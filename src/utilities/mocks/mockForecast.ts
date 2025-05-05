@@ -1,0 +1,95 @@
+import { ForecastDay } from "../../types/data";
+import { getMood } from "../getMood";
+
+export const dummyForecast: ForecastDay[] = [
+  // Energetic
+  {
+    day: "Monday",
+    date: "2023-10-02",
+    tempHigh: 85,
+    tempLow: 65,
+    uvIndex: 9,
+    rainChance: 5,
+    feelsLike: 84,
+    windSpeed: 5,
+    cloudCover: 10,
+    ...getMood(85, 65, 9, 5, 10, 5),
+  },
+  // Cozy
+  {
+    day: "Tuesday",
+    date: "2023-10-03",
+    tempHigh: 60,
+    tempLow: 50,
+    uvIndex: 2,
+    rainChance: 80,
+    feelsLike: 58,
+    windSpeed: 8,
+    cloudCover: 85,
+    ...getMood(60, 50, 2, 80, 85, 8),
+  },
+  // Sleepy
+  {
+    day: "Wednesday",
+    date: "2023-10-04",
+    tempHigh: 62,
+    tempLow: 50,
+    uvIndex: 3,
+    rainChance: 10,
+    feelsLike: 60,
+    windSpeed: 6,
+    cloudCover: 70,
+    ...getMood(62, 50, 3, 10, 70, 6),
+  },
+  // Chill
+  {
+    day: "Thursday",
+    date: "2023-10-05",
+    tempHigh: 72,
+    tempLow: 58,
+    uvIndex: 5,
+    rainChance: 5,
+    feelsLike: 71,
+    windSpeed: 6,
+    cloudCover: 30,
+    ...getMood(72, 58, 5, 5, 30, 6),
+  },
+  // Adventurous
+  {
+    day: "Friday",
+    date: "2023-10-06",
+    tempHigh: 95,
+    tempLow: 60,
+    uvIndex: 10,
+    rainChance: 10,
+    feelsLike: 94,
+    windSpeed: 22,
+    cloudCover: 25,
+    ...getMood(95, 60, 10, 10, 25, 22),
+  },
+  // Productive
+  {
+    day: "Saturday",
+    date: "2023-10-07",
+    tempHigh: 76,
+    tempLow: 60,
+    uvIndex: 5,
+    rainChance: 10,
+    feelsLike: 75,
+    windSpeed: 12,
+    cloudCover: 40,
+    ...getMood(76, 60, 5, 10, 40, 12),
+  },
+  {
+    day: "Sunday",
+    date: "2023-10-08",
+    tempHigh: 70,
+    tempLow: 55,
+    uvIndex: 4,
+    rainChance: 10,
+    feelsLike: 69,
+    windSpeed: 7,
+    cloudCover: 25,
+    ...getMood(70, 55, 4, 10, 25, 7),
+  },
+];

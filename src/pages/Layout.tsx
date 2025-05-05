@@ -1,12 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
+import { FC } from "react";
 
-const Layout = () => {
+const Layout: FC = () => {
   return (
-    <>
+    <main>
       <Header />
-      <Outlet />
-    </>
+      <div className="w-full p-4 flex justify-center">
+        <Outlet />
+      </div>
+    </main>
   );
 };
 
