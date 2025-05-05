@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { ForecastDay } from "../types/data";
 import { Link } from "react-router-dom";
+import ForecastCard from "../components/ForecastCard";
 
 interface ForecastPageProps {
   forecast: ForecastDay[] | null;
@@ -11,20 +12,14 @@ const ForecastPage: FC<ForecastPageProps> = ({ forecast }) => {
   if (forecast.length === 0) return <p>No forecast available.</p>;
 
   return (
-    <section className="p-4">
-      <h1 className="heading mb-4">7 Day Forecast</h1>
-      <ul>
+    <section
+      role="main"
+      className="py-4 w-full max-w-[1200px] flex flex-col items-center"
+    >
+      <h1 className="subheading mb-4">7 Day Forecast</h1>
+      <ul className="w-full">
         {forecast.map((day) => (
-          <li key={day.date}>
-            <Link
-              to={`/forecast/${day.date}`}
-              className="body border border-solid border-gray-200 m-4"
-            >
-              <span className="font-medium">
-                {day.day} - {day.tempHigh}°/{day.tempLow}°
-              </span>
-            </Link>
-          </li>
+          <ForecastCard day={day} />
         ))}
       </ul>
     </section>

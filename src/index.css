@@ -8,7 +8,7 @@
   --color-border: #e5e7eb;
   --color-accent: #3b82f6;
   --color-moodEnergetic: #facc15;
-  --color-moodCozy: #c87100;
+  --color-moodCozy: #ff8000;
   --color-moodSleepy: #c4b5fd;
   --color-moodChill: #e0f2fe;
   --color-moodProductive: #a7f3d0;
@@ -54,4 +54,23 @@
   font-size: var(--font-size-caption);
   font-weight: var(--font-weight-caption);
   color: var(--color-textSecondary);
+}
+
+.energetic {
+  background-color: var(--color-moodEnergetic);
+}
+.cozy {
+  background-color: var(--color-moodCozy);
+}
+.sleepy {
+  background-color: var(--color-moodSleepy);
+}
+.chill {
+  background-color: var(--color-moodChill);
+}
+.productive {
+  background-color: var(--color-moodProductive);
+}
+.adventurous {
+  background-color: var(--color-moodAdventurous);
 }

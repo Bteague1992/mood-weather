@@ -46,7 +46,7 @@ export async function fetchWeather(
       const mood = getMood(high, low, uv, rain, cloud, wind);
 
       return {
-        day: d.toLocaleDateString("en-US", { weekday: "long" }),
+        day: d.toLocaleDateString("en-US", { weekday: "long" }).slice(0, 3),
         date: t,
         tempHigh: high,
         tempLow: low,

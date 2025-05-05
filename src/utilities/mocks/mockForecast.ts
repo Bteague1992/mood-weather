@@ -1,10 +1,10 @@
 import { ForecastDay } from "../../types/data";
 import { getMood } from "../getMood";
 
-export const dummyForecast: ForecastDay[] = [
+export const mockForecast: ForecastDay[] = [
   // Energetic
   {
-    day: "Monday",
+    day: "Mon",
     date: "2023-10-02",
     tempHigh: 85,
     tempLow: 65,
@@ -17,7 +17,7 @@ export const dummyForecast: ForecastDay[] = [
   },
   // Cozy
   {
-    day: "Tuesday",
+    day: "Tue",
     date: "2023-10-03",
     tempHigh: 60,
     tempLow: 50,
@@ -30,7 +30,7 @@ export const dummyForecast: ForecastDay[] = [
   },
   // Sleepy
   {
-    day: "Wednesday",
+    day: "Wed",
     date: "2023-10-04",
     tempHigh: 62,
     tempLow: 50,
@@ -43,7 +43,7 @@ export const dummyForecast: ForecastDay[] = [
   },
   // Chill
   {
-    day: "Thursday",
+    day: "Thu",
     date: "2023-10-05",
     tempHigh: 72,
     tempLow: 58,
@@ -56,7 +56,7 @@ export const dummyForecast: ForecastDay[] = [
   },
   // Adventurous
   {
-    day: "Friday",
+    day: "Fri",
     date: "2023-10-06",
     tempHigh: 95,
     tempLow: 60,
@@ -69,7 +69,7 @@ export const dummyForecast: ForecastDay[] = [
   },
   // Productive
   {
-    day: "Saturday",
+    day: "Sat",
     date: "2023-10-07",
     tempHigh: 76,
     tempLow: 60,
@@ -81,7 +81,7 @@ export const dummyForecast: ForecastDay[] = [
     ...getMood(76, 60, 5, 10, 40, 12),
   },
   {
-    day: "Sunday",
+    day: "Sun",
     date: "2023-10-08",
     tempHigh: 70,
     tempLow: 55,
